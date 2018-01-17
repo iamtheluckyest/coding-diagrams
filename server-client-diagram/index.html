@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Request-Response Cycle</title>
+        
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://use.fontawesome.com/8e6e376c1a.js"></script>
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div class="container">
+            
+            <div class="row">
+                <div class="col s12">
+                    <center>
+                       <h1>Request-Response Cycle</h1>
+                    </center>
+                </div>
+            </div>
+            
+            <div class="row holder">
+                <div class="col s4 outer">
+                    <div class="card blue darken-1" id="client">
+                        <div class="card-content white-text">
+                            <div class="card-title main">
+                                Client
+                            </div>
+                        </div>
+                        
+                        <div class="card-tabs">
+                          <ul class="tabs tabs-fixed-width blue lighten-1">
+                            <li class="tab"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Definition" href="#client-definition">&nbsp;<i class="fa fa-book" aria-hidden="true"></i>&nbsp;</a></li>
+                            <li class="tab"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Examples" href="#client-examples">&nbsp;<i class="fa fa-th" aria-hidden="true"></i>&nbsp;</a></li>
+                            <li class="tab" title="Clues"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Clues" href="#client-clues">&nbsp;<i class="fa fa-search" aria-hidden="true"></i>&nbsp;</a></li>
+                          </ul>
+                        </div>
+                        <div class="card-content blue darken-1 white-text">
+                            <div id="client-definition">
+                                <div class="card-title subtitle">Definition</div>
+                                Sends requests, receives responses
+                            </div>
+                            <div id="client-examples">
+                                <div class="card-title subtitle">Examples</div>
+                                <p>The browser,  which sends a GET request any time it goes to a new URL and displays the response.</p>
+                                <br>
+                                <p>AJAX, which sends requests (i.e. when triggered by user input) and stores the response as data in a variable.</p>
+                            </div>
+                            <div id="client-clues">
+                                <div class="card-title subtitle">Clues you're coding the client-side</div>
+                                <ul>
+                                    <li>You are writing HTML files</li>
+                                    <li>You are using jQuery</li>
+                                    <li>You are sending requests with AJAX</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card amber darken-1" id="request">
+                        <div class="card-content white-text">
+                            <div class="card-title main">
+                                Request
+                            </div>
+                        </div>
+                        
+                        <div class="card-tabs">
+                          <ul class="tabs tabs-fixed-width amber lighten-1">
+                            <li class="tab"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Definition" href="#req-definition">&nbsp;<i class="fa fa-book" aria-hidden="true"></i>&nbsp;</a></li>
+                            <li class="tab"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Head" href="#req-head">&nbsp;<i class="fa fa-header" aria-hidden="true"></i>&nbsp;</a></li>
+                            <li class="tab" title="Clues"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Body" href="#req-body">&nbsp;<i class="fa fa-bold" aria-hidden="true"></i>&nbsp;</a></li>
+                          </ul>
+                        </div>
+                        <div class="card-content amber darken-1 white-text">
+                            <div id="req-definition">
+                                <div class="card-title subtitle">Definition</div>
+                                Data sent by the client to the server. Holds information in head and body.</div>
+                            <div id="req-head">
+                                <div class="card-title subtitle">Head</div>
+                                Contains information about the request itself, such as the URL, the method (GET, POST, etc), or content type.
+                            </div>
+                            <div id="req-body">
+                                <div class="card-title subtitle">Body</div>
+                                Contains any other data that the client is passing to the sever. In AJAX, this is the information assigned to the “data” key.
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card amber darken-1" id="response">
+                        <div class="card-content white-text">
+                            <div class="card-title main">
+                                Response
+                            </div>
+                        </div>
+                        
+                        <div class="card-tabs">
+                          <ul class="tabs tabs-fixed-width amber lighten-1">
+                            <li class="tab"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Definition" href="#res-definition">&nbsp;<i class="fa fa-book" aria-hidden="true"></i>&nbsp;</a></li>
+                            <li class="tab"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Head" href="#res-head">&nbsp;<i class="fa fa-header" aria-hidden="true"></i>&nbsp;</a></li>
+                            <li class="tab" title="Clues"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Body" href="#res-body">&nbsp;<i class="fa fa-bold" aria-hidden="true"></i>&nbsp;</a></li>
+                          </ul>
+                        </div>
+                        <div class="card-content amber darken-1 white-text">
+                            <div id="res-definition">
+                                <div class="card-title subtitle">Definition</div>
+                                Data sent by the client to the server. Holds information in head and body.
+                            </div>
+                                <div id="res-head">
+                                <div class="card-title subtitle">Head</div>
+                                Contains information about the response itself, such as the status, or content type.
+                            </div>
+                            <div id="res-body">
+                                <div class="card-title subtitle">Body</div>
+                                Contains any other data that the server is passing to the client. In AJAX, this received in the .done callback.
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card blue darken-1" id="server">
+                        <div class="card-content white-text">
+                            <div class="card-title main">
+                                Server
+                            </div>
+                        </div>
+                        
+                        <div class="card-tabs">
+                          <ul class="tabs tabs-fixed-width blue">
+                            <li class="tab"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Definition" href="#server-definition">&nbsp;<i class="fa fa-book" aria-hidden="true"></i>&nbsp;</a></li>
+                            <li class="tab"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Examples" href="#server-examples">&nbsp;<i class="fa fa-th" aria-hidden="true"></i>&nbsp;</a></li>
+                            <li class="tab" title="Clues"><a class="active white-text tooltipped" data-position="bottom" data-delay="75" data-tooltip="Clues" href="#server-clues">&nbsp;<i class="fa fa-search" aria-hidden="true"></i>&nbsp;</a></li>
+                          </ul>
+                        </div>
+                        <div class="card-content blue darken-1 white-text">
+                            <div id="server-definition">
+                                <div class="card-title subtitle">Definition</div>
+                                Receives requests, sends responses
+                            </div>
+                            <div id="server-examples">
+                                <div class="card-title subtitle">Examples</div>
+                                <p>Code logic that parses the URL, method, and other data from a request, and sends back data.</p>
+                                <br>
+                                <p>Software like Express/Node or Apache that enables such code to function.</p>
+                            </div>
+                            <div id="server-clues">
+                                <div class="card-title subtitle">Clues you're coding the server-side<br><span style="font-size:.8em">(in Node.js with Express)</span></div>
+                                <ul>
+                                    <li>You are using require()</li>
+                                    <li>You are using express()</li>
+                                    <li>You are using routers (i.e. app.get(), router.get())</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+</html>
