@@ -18,9 +18,10 @@ console.log(firstName + " " + lastName + " is " + age + " and is good at " + pro
 
 /**********************************************
     ARRAY METHODS
+    (actually part of ES5, not ES6, but this is useful practice)
 **********************************************/
 
-// 2. New array methods
+// 2. New array methods 
 
 // DO: List the four new array methods with a description of what they are used for. 
 // (Bonus: include array method callbacks and parameters)
