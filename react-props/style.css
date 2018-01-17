@@ -1,0 +1,52 @@
+html, body {
+    height:100%;
+}
+
+body {
+    background-color:#d1c4e9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #3f51b5;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+}
+
+section, .col, .row {
+    background-color: #fff;
+
+}
+
+pre.code-snippet {
+    padding: 10px;
+    background-color:#ede7f6;
+    font-size: 12px;
+    color: #311b92;
+}
+
+pre.code-snippet::-webkit-scrollbar {
+    height:8px;  
+    border-radius:10px;
+    background-color:#d1c4e9;
+}
+
+pre.code-snippet::-webkit-scrollbar-thumb {
+    background-color:#9575cd;
+    border-radius:10px;
+}
+
+li {
+    padding-left:20px;
+    padding-bottom: 10px
+}

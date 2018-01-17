@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>React - Understanding Props</title>
+        
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://use.fontawesome.com/8e6e376c1a.js"></script>
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div class="container">
+            
+            <div class="row">
+              <div class="col s12">
+                <center>
+                   <h1>React - Understanding Props</h1>
+                </center>
+              </div>
+            </div>
+            
+            <section class="row">
+              <div class="col s12">
+                <h2>
+                    Let's Start with JSX
+                </h2>
+                <p>
+                    JSX is a Javascript syntax developed by Facebook for use in React. Two important things about JSX for the purpose of this explanation.
+                    <ol>
+                        <li>
+                            <strong>It looks like HTML, but it is Javascript.</strong> This means that while it <em>looks</em> like you are writing HTML tags with attributes, you are actually writing Javascipt functions that React turns into HTML. 
+                        </li>
+                        <li>
+                            <strong>There is no JSX outside of React.</strong> Okay, actually <a href="https://github.com/alexmingoia/jsx-transform" target="_blank">there can be</a> but JSX was specifically designed for React and remembering this will (hopefully) make understanding it a little easier.
+                        </li>
+                    </ol>
+                </p>
+              </div>
+            </section>
+              
+            <section class="row">
+              <div class="col s12">
+                <h2>
+                    What React does with JSX
+                </h2>
+                <p>
+                    When React sees Javascript written in JSX syntax, it breaks it apart and sticks the pieces into the React.createElement function. This function has takes three arguments
+                    <ol>
+                        <li>
+                            <strong>Type.</strong> This is the type of element you are creating. It might be a regular HTML type (i.e. h1, a, p, div) or a component (i.e. Container, ListItem). 
+                        </li>
+                        <li>
+                            <strong>Properties, or "props".</strong> Any "attributes" you give your "element" will be bundled together into a single object. If the type matches a regular HTML type, the props object will be interpreted as actual attributes for that element (src, href, name, alt, etc.). But if the type matches a component, the props object will be made available to that component via the props argument that the child component received as an argument.
+                        </li>
+                        <li>
+                            <strong>Children.</strong> These are the child "elements" of whatever element you are creating with React.createElement.
+                        </li>
+                    </ol>
+                </p>
+              
+              <div class="row">
+                <div class="col m6">
+                  <h3>JSX</h3>
+                  <pre class="code-snippet">
+<span class="grey-text text-darken-2">import React from "react";
+import ColoredBox from "./components/ColoredBox";</span>
+
+const App = () => 
+  &lt;div>
+    &lt;img 
+      src="http://logosrated.net/wp-content/uploads/parser/React-Logo-1.png" 
+      alt="react logo"
+    />
+    &lt;ColoredBox 
+      boxColor="darkblue"
+      textColor="white"
+    />
+  &lt;/div>
+  
+<span class="grey-text text-darken-2">export default App;</span>
+                  </pre>
+                </div>
+                  
+                <div class="col m6">
+                  <h3>Regular Javascript</h3>
+                  (ignoring the import and export statements so we can focus on the JSX interpretation)
+
+                  <pre class="code-snippet">
+var App = function App() {
+  return React.createElement(
+    "div",
+    null,
+    React.createElement("img", {
+      src: "http://logosrated.net/wp-content/uploads/parser/React-Logo-1.png",
+      alt: "react logo"
+    }),
+    React.createElement(ColoredBox, {
+      boxColor: "darkblue",
+      textColor: "white"
+    })
+  );
+};
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+      </div>
+        
+        
+        
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+</html>
