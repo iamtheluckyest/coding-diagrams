@@ -68,3 +68,44 @@ li {
     width: 250px;
     display: block;
 }
+
+#animateProps:hover, #reset:hover {
+    cursor: pointer;
+}
+
+.animateShow, #reset {
+    display:none;
+}
+
+.switch1 {
+    color: #ede7f6;
+}
+
+span[class^=changeColor] {
+    color: #ede7f6;
+}
+
+.changeColor1 {
+    animation: changeColor 1s ease-out 0s;
+    animation-fill-mode: both;
+}
+
+.changeColor2 {
+    animation: changeColor 1s ease-out 1.2s;
+    animation-fill-mode: both;
+}
+
+.changeColor3 {
+    animation: changeColor 1s ease-out 2.4s;
+    animation-fill-mode: both;
+
+}
+
+@keyframes changeColor {
+    0% {
+        color: #ede7f6;
+    }
+    100% {
+        color: #00acc1;
+    }
+}

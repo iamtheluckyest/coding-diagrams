@@ -152,7 +152,9 @@ var App = <span data-match="function">function</span> App() {
                 <div class="col m6">
                   <h3>Parent Component</h3>
                   Hover over the code to learn more.
-                  <pre class="code-snippet">
+                   <a id="animateProps">Click to animate props</a>
+                   <a id="reset">Click to reset props</a>
+                  <pre class="code-snippet animateHide">
 <a class="tooltipped" data-position="bottom" data-delay="40" data-tooltip="We need to import React so that it can interpret the JSX">import React from "react";</a>
 <a class="tooltipped" data-match="ColoredBox-import-export" data-position="bottom" data-delay="40" data-tooltip="The ColoredBox function is imported here for use below.">import ColoredBox from "./components/ColoredBox";</a>
 
@@ -167,12 +169,29 @@ const App = () =>
   
 export default App;
                   </pre>
+                  <pre class="code-snippet animateShow">
+import React from "react";
+import ColoredBox from "./components/ColoredBox";
+
+const message = "Hello";
+
+const App = () => 
+  &lt;div>
+    &lt;ColoredBox&nbsp;<span class="switch1" data-switch="{">&nbsp;</span>
+      <span class="changeColor1">textContent</span><span class="switch1" data-switch=":">=</span><span class="changeColor1">{message}</span>
+      <span class="changeColor1">boxColor</span><span class="switch1" data-switch=":">=</span><span class="changeColor1">"darkblue"</span>
+      <span class="changeColor1">textColor</span><span class="switch1" data-switch=":">=</span><span class="changeColor1">"white"</span>
+    <span class="switch1" data-switch="}">&nbsp;</span>/>
+  &lt;/div>
+  
+export default App;
+                  </pre>
                 </div> <!-- end .col.m6-->
                 
                 <div class="col m6">
                   <h3>Child Component</h3>
                   Hover over the code to learn more.
-                  <pre class="code-snippet">
+                  <pre class="code-snippet animateHide">
 <a class="tooltipped" data-position="bottom" data-delay="40" data-tooltip="We need to import React so that it can interpret the JSX">import React from "react";</a>
 <a class="tooltipped" data-position="bottom" data-delay="40" data-tooltip="Note that we don't need to import the parent component, App. This is because the ColoredBox is imported into App, and all the information ColoredBox needs is passed into it via props.">                             </a>
 <a class="tooltipped" data-match="coloredBox-function" data-position="right" data-delay="40" data-tooltip="This is where the ColoredBox function is declared.">const ColoredBox = </a><span data-match="function2">(</span><a class="tooltipped props" data-color="blue lighten-4" data-match="props" data-position="bottom" data-delay="40" data-tooltip="This is where the properties object from the parent, App, gets passed into the child, ColoredBox, when the ColoredBox function is called.">props</a><a class="tooltipped" data-match="function2" data-position="bottom" data-delay="40" data-tooltip="Note the () and =>. This is a function! Once again, the return statement is implied so we don't have it or any {}">) => </a>    
@@ -184,6 +203,19 @@ export default App;
   &lt;/div>
   
 <a class="tooltipped" data-match="ColoredBox-import-export" data-position="bottom" data-delay="40" data-tooltip="The ColoredBox function is exported here for use wherever it is imported.">export default ColoredBox;</a>
+                  </pre>
+                  <pre class="code-snippet animateShow">
+import React from "react";
+
+const ColoredBox = (<span class="changeColor2">props</span>) =>     
+  &lt;div style={{
+    backgroundColor: <span class="changeColor3">props.boxColor</span>, 
+    color: <span class="changeColor3">props.textColor</span>
+  }}>
+    &lt;p>{<span class="changeColor3">props.textContent</span>}&lt;/p>
+  &lt;/div>
+  
+export default ColoredBox;
                   </pre>
                   <div>This renders like this: </div>
                   <div style="background-color: darkblue; color: white;">
