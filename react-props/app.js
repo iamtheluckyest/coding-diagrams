@@ -1,23 +1,26 @@
 /*global $*/
 $(document).ready(function(){
-    $("html").show();
-    resizeClientServer();
+    
 });
 
-$(window).resize(resizeClientServer);
+$("[data-match]").mouseover(function(){
+    var match = $(this).attr("data-match")
+    $("[data-match='" + match + "']").css("color", "#00acc1")
+})
 
-$(".tab").click(function(){
-    setTimeout(resizeClientServer, .5)
-});
+$("[data-match]").mouseout(function(){
+    var match = $(this).attr("data-match")
+    $("[data-match='" + match + "']").css("color", "#311b92")
+})
 
-function resizeClientServer(){
-    centerSideCard("#client");
-    centerSideCard("#server");
-}
+$(".props").mouseover(function() {
+    $(".props").each(function(){
+        $(this).addClass($(this).attr("data-color"))
+    })
+})
 
-function centerSideCard(elementId){
-    $(elementId).css("margin-top", $(elementId).height()/-2);
-    $(elementId).css("top", ($("#request").height() + 30 + $("#response").height()) / 2 );
-    // $(elementId).animate({"margin-top": $(elementId).height()/-2}, 50);
-    // $(elementId).animate({"top": ($("#request").height() + 30 + $("#response").height()) / 2 }, 50);
-}
+$(".props").mouseout(function() {
+    $(".props").each(function(){
+        $(this).removeClass($(this).attr("data-color"))
+    })
+})

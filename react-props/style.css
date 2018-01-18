@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
 }
 
 .container {
@@ -35,6 +35,14 @@ pre.code-snippet {
     color: #311b92;
 }
 
+pre.code-snippet a {
+    color:inherit;
+}
+
+pre.code-snippet a:hover {
+    color:#00acc1;
+}
+
 pre.code-snippet::-webkit-scrollbar {
     height:8px;  
     border-radius:10px;
@@ -46,7 +54,17 @@ pre.code-snippet::-webkit-scrollbar-thumb {
     border-radius:10px;
 }
 
+
 li {
-    padding-left:20px;
-    padding-bottom: 10px
+    padding-top: 10px
+}
+
+/*.material-tooltip > .backdrop {*/
+    
+/*}*/
+
+.material-tooltip > span {
+    font-size:12px;
+    width: 250px;
+    display: block;
 }
