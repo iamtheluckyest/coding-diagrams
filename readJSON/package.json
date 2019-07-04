@@ -4,7 +4,9 @@
   "description": "Example of how to save JSON data instead of console logging it so it can be viewed more easily.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,8 @@
   },
   "homepage": "https://github.com/iamtheluckyest/liri-node-app#readme",
   "dependencies": {
-    "node-spotify-api": "^1.0.7"
-  }
+    "node-spotify-api": "^1.0.7",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
